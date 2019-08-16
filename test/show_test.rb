@@ -16,9 +16,13 @@ class ShowTest < Minitest::Test
     assert_instance_of Show, @havenfall
   end
 
-  def test_show_exposes_attributes
+  def test_show_exposes_basic_attributes
     assert_equal "Havenfall is for Lovers", @havenfall.name
     assert_equal "Lovestruck Crew", @havenfall.creator
     assert_equal [@jd, @razi], @havenfall.characters
+  end
+
+  def test_show_calculates_total_salary
+    assert_equal 350000, @havenfall.total_salary
   end
 end
