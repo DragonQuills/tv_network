@@ -18,6 +18,12 @@ class Network
   end
 
   def highest_paid_actor
-    return @characters.max_by {|char| char.salary}.actor
+    return @characters.max_by {|chara| chara.salary}.actor
+  end
+
+  def payroll
+    final_payroll = {}
+    @characters.each {|chara| final_payroll[chara.actor] = chara.salary}
+    return final_payroll
   end
 end
