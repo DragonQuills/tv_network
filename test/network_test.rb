@@ -38,4 +38,8 @@ class NetworkTest < Minitest::Test
 
     assert_equal [@knight_rider, @parks_and_rec], @nbc.shows
   end
+
+  def test_highest_paid_actor_method
+    assert_equal "Amy Poehler", @nbc.highest_paid_actor
+  end
 end
