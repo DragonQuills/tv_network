@@ -1,3 +1,5 @@
+require './lib/character.rb'
+
 class Show
   attr_reader :name
   attr_reader :characters
