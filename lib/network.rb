@@ -16,4 +16,8 @@ class Network
     @shows.push(show)
     @characters += show.characters
   end
+
+  def highest_paid_actor
+    return @characters.max_by {|char| char.salary}.actor
+  end
 end
