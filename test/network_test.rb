@@ -1,5 +1,4 @@
 require 'minitest'
-require 'minitest/pride'
 require 'minitest/autorun'
 
 require './lib/character.rb'
@@ -31,5 +30,12 @@ class NetworkTest < Minitest::Test
 
   def test_network_initializes_with_blank_shows_list
     assert_equal [], @nbc.shows
+  end
+
+  def test_network_adds_shows_to_list
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
+
+    assert_equal [@knight_rider, @parks_and_rec], @nbc.shows
   end
 end
