@@ -42,11 +42,14 @@ class NetworkTest < Minitest::Test
   def test_netwrok_tracks_characters
     @nbc.add_show(@knight_rider)
     @nbc.add_show(@parks_and_rec)
-    
+
     assert_equal [@michael_knight, @kitt, @leslie_knope, @ron_swanson], @nbc.characters
   end
 
   def test_highest_paid_actor_method
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
+    
     assert_equal "Amy Poehler", @nbc.highest_paid_actor
   end
 end
