@@ -15,4 +15,10 @@ class ShowTest < Minitest::Test
   def test_show_exists
     assert_instance_of Show, @havenfall
   end
+
+  def test_show_exposes_attributes
+    assert_equal "Havenfall is for Lovers", @havenfall.name
+    assert_equal "Lovestruck Crew", @havenfall.creator
+    assert_equal [@jd, @razi], @havenfall.characters
+  end
 end
