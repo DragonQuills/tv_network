@@ -28,4 +28,8 @@ class NetworkTest < Minitest::Test
   def test_network_has_name
     assert_equal "NBC", @nbc.name
   end
+
+  def test_network_initializes_with_blank_shows_list
+    assert_equal [], @nbc.shows
+  end
 end
